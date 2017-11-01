@@ -36,10 +36,13 @@ function printFoods(){
         <link rel='stylesheet' href='css/styles.css'>
     </head>
     <body>
+        <h1>Food Menu</h1>
         <select>
             <option value="">Select One</option>
             <?=getOptions()?>
         </select>
+        <br>
+        <br>
         <?=printFoods()?>
     </body>
 </html>

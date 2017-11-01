@@ -3,4 +3,10 @@ table, th, td{
 }
 table{
     border-collapse: collapse;
+    width: 50%;
+    text-align:left;
+    margin: 0px auto;
+}
+html{
+    text-align: center;
 }
