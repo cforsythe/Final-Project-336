@@ -9,6 +9,7 @@ table{
 }
 html{
     text-align: center;
+<<<<<<< HEAD
     background:royalblue;
     color: white;
 }
@@ -23,4 +24,9 @@ h1{
 
 
     
+=======
+}
+td a{
+    color: black;
+>>>>>>> 5de7e876849f7a737c92e0479dc931a07376c1a7
 }

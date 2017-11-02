@@ -13,16 +13,21 @@ function getOptions(){
 }
 function printFoods(){
     global $conn;
-    $sql = "SELECT foodName, price FROM `food`";
+    $sql = "SELECT foodName, price, calories FROM `food`";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $record = $stmt->fetchAll();
     echo "<table id='foods'>";
-    echo "<tr><th>Food</th>" . "<th>Price</th></tr>";
+    echo "<tr><th>Food</th>" . "<th>Calories</th>" . "<th>Price</th></tr>";
     foreach($record as $food){
         echo "<tr>
+<<<<<<< HEAD
                 <td>
                     <label><input type='radio' name='cartItems' value='" . $food['foodName'] . "'>".$food['foodName']."</label></td>
+=======
+                <td><a href='getFoodInfo.php?foodName=${food['foodName']}'>" . $food['foodName'] . "</a></td>
+                <td>". $food['calories'] . "</td>
+>>>>>>> 5de7e876849f7a737c92e0479dc931a07376c1a7
                 <td>". $food['price'] . "</td>
             </tr>";
     }
