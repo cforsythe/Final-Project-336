@@ -21,7 +21,8 @@ function printFoods(){
     echo "<tr><th>Food</th>" . "<th>Price</th></tr>";
     foreach($record as $food){
         echo "<tr>
-                <td>" . $food['foodName'] . "</td>
+                <td>
+                    <label><input type='radio' name='cartItems' value='" . $food['foodName'] . "'>".$food['foodName']."</label></td>
                 <td>". $food['price'] . "</td>
             </tr>";
     }
@@ -42,7 +43,11 @@ function printFoods(){
             <?=getOptions()?>
         </select>
         <br>
-        <br>
-        <?=printFoods()?>
+        <h2>Select Item's To Add To Cart</h2>
+        <form action="/shoppingCart.php">
+             <?=printFoods()?>
+             <input type="submit" value="Submit">
+        </form>
+       
     </body>
 </html>
