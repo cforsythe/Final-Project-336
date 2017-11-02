@@ -21,7 +21,7 @@ function printFoods(){
     echo "<tr><th>Food</th>" . "<th>Price</th></tr>";
     foreach($record as $food){
         echo "<tr>
-                <td>" . $food['foodName'] . "</td>
+                <td><a href='getFoodInfo.php?foodName=${food['foodName']}'>" . $food['foodName'] . "</a></td>
                 <td>". $food['price'] . "</td>
             </tr>";
     }
