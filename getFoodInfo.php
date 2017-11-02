@@ -4,7 +4,7 @@ $conn = getDatabaseConnection();
 
 function getFoodInfo(){
     global $conn;
-    $sql = "SELECT foodName, price, timeName, name FROM food
+    $sql = "SELECT foodName, price, timeName, name, calories FROM food
             NATURAL JOIN restaurant
             NATURAL JOIN time
             WHERE foodName=:food";
@@ -17,6 +17,7 @@ function getFoodInfo(){
     $record = $stmt->fetch();
     
     echo "Food: " . $record['foodName'] . "<br>
+        Calories: " . $record['calories'] . "<br>
         Price: " . $record['price'] . "<br>
         Time: " . $record['timeName'] . "<br>
         Restaurant: " . $record['name'];
