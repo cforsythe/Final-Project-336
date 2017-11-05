@@ -27,3 +27,20 @@ h1{
 td a{
     color: black;
 }
+td button a{
+    text-decoration: none;
+}
+#cartbutton{
+    text-decoration: none;
+    color: black;
+    background-color: grey;
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom:10px;
+}
+#cartbutton:hover{
+    background-color: lightgrey;
+}
+#textinput{
+    width: 30%;
+}

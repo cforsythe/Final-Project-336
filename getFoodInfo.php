@@ -16,11 +16,20 @@ function getFoodInfo(){
     $stmt->execute($namedParameters);
     $record = $stmt->fetch();
     
-    echo "Food: " . $record['foodName'] . "<br>
-        Calories: " . $record['calories'] . "<br>
-        Price: " . $record['price'] . "<br>
-        Time: " . $record['timeName'] . "<br>
-        Restaurant: " . $record['name'];
+    echo "<html>
+            <head>
+                <title> Food Information </title>
+                <link rel='stylesheet' href='css/styles.css'>
+            </head>
+            <body>
+            <h1>Food Information</h1>
+            Food: " . $record['foodName'] . "<br>
+            Calories: " . $record['calories'] . "<br>
+            Price: " . $record['price'] . "<br>
+            Time: " . $record['timeName'] . "<br>
+            Restaurant: " . $record['name'] . 
+            "</body>
+         </html>";
 }
 
 
