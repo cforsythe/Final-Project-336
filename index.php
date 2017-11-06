@@ -70,7 +70,7 @@ function printFoods(){
         echo "<tr>
                 <td><a href='getFoodInfo.php?foodName=${food['foodName']}'>" . $food['foodName'] . "</a></td>
                 <td>". $food['calories'] . "</td>
-                <td>". $food['price'] . "</td>
+                <td> $". $food['price'] . "</td>
                 <td><button><a href='addToCart.php?item=${food['foodName']}&price=${food['price']}'>Add to cart</a></button></td>
             </tr>";
     }
