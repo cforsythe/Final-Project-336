@@ -1,5 +1,5 @@
 <?php
-include 'dbConnection.php';
+include '../dbConnection.php';
 $conn = getDatabaseConnection();
 
 function getFoodInfo(){
@@ -16,11 +16,21 @@ function getFoodInfo(){
     $stmt->execute($namedParameters);
     $record = $stmt->fetch();
     
-    echo "Food: " . $record['foodName'] . "<br>
-        Calories: " . $record['calories'] . "<br>
-        Price: " . $record['price'] . "<br>
-        Time: " . $record['timeName'] . "<br>
-        Restaurant: " . $record['name'];
+    echo "<html>
+            <head>
+                <title> Food Information </title>
+                <link rel='stylesheet' href='css/styles.css'>
+            </head>
+            <body>
+            <h1>Food Information</h1>
+            <div id='foodInfo'>
+             Food: <div id='foodName'>" . $record['foodName'] . "</div><br>
+            Calories: <div id='foodName'>" . $record['calories'] . "</div><br>
+            Price: <div id='foodName'>$" . $record['price'] . "</div> <br>
+            Time:  <div id='foodName'>" . $record['timeName'] . "</div><br>
+            Restaurant: <div id='foodName'>" . $record['name'] . 
+            "</div></div></body>
+         </html>";
 }
 
 
